@@ -4,5 +4,242 @@ Author: AimHigher Web Design
 Description: Custom Template for Wondai Country Running Festival
 Version: 0.0.1
 */
+@import url("https://fonts.googleapis.com/css?family=Alegreya:500,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Alegreya:500,700,800,900");
+* {
+  box-sizing: border-box;
+  color: #191919;
+  font: 400 1em Arial, sans-serif; }
+
+body {
+  margin: 0;
+  overflow-x: hidden; }
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px; }
+
+::-webkit-scrollbar-thumb {
+  background: #f0c9cb;
+  background: #c1272d, 0.2; }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c73d42;
+    background: #c1272d, 0.9; }
+
+h1 {
+  color: #611417;
+  font: 400 1.5em "Alegreya", serif;
+  font-size: 2.5em;
+  text-align: left;
+  text-transform: uppercase; }
+
+h2 {
+  color: #611417;
+  font: 400 1.5em "Alegreya", serif;
+  font-size: 2em; }
+
+h3 {
+  color: #911d22;
+  font: 400 1.5em "Alegreya", serif;
+  font-size: 1.8em; }
+
+h4 {
+  color: #300a0b;
+  font: 400 1.5em "Alegreya", serif;
+  font-size: 1.3em;
+  margin-bottom: 0.5em; }
+
+h5 {
+  color: #300a0b;
+  font: 400 1.5em "Alegreya", serif;
+  font-size: 1.2em;
+  margin-bottom: 0.5em; }
+
+blockquote {
+  border: none;
+  border-right: 4px solid #f79321;
+  color: #911d22;
+  padding: 10px 10px 10px 5px;
+  text-align: right; }
+
+ul {
+  margin: 0.3em 0;
+  padding-left: 40px; }
+  ul li {
+    list-style-type: disc; }
+
+ol {
+  margin: 0.3em 0; }
+  ol li {
+    line-height: 2em; }
+
+hr {
+  border-color: #e09396; }
+
+img {
+  max-width: 100%; }
+
+figcaption {
+  border: none;
+  border-left: 3px solid #f79321;
+  color: #ae2329;
+  padding: 5px 5px 5px 10px;
+  text-align: left; }
+
+nav ul, nav li {
+  list-style-type: none; }
+
+.icons i {
+  color: #d15d62;
+  cursor: pointer;
+  height: 40px;
+  margin: 20px;
+  width: 40px; }
+  .icons i:hover {
+    fill: #c1272d;
+    stroke: #c1272d; }
+
+form {
+  border: 1px solid #e09396;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px; }
+  form h5 {
+    margin: 0; }
+  form input {
+    background: #f9e9ea;
+    border: 1px solid #d15d62;
+    color: #300a0b;
+    display: block;
+    margin: 10px 0;
+    padding: 5px 10px;
+    width: 100%; }
+    form input::placeholder {
+      color: #300a0b; }
+
+button, .btn {
+  background: none;
+  border: 2px solid #611417;
+  color: #611417;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  margin: 10px 0;
+  text-transform: uppercase; }
+  button:active, button:hover, button:focus, .btn:active, .btn:hover, .btn:focus {
+    background: #611417;
+    color: #fff; }
+
+header {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+  width: 100vw;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  z-index: 50; }
+  header .site-logo {
+    height: 100%; }
+    header .site-logo img {
+      max-height: 100%; }
+
+.menu.main li a {
+  color: #611417;
+  display: block;
+  font: 400 1.5em "Alegreya", serif;
+  font-size: 1em;
+  margin: 0 10px;
+  padding: 10px 0 12px;
+  text-decoration: none; }
+  .menu.main li a:active, .menu.main li a:hover, .menu.main li a:focus {
+    border-bottom: 2px solid #611417;
+    padding-bottom: 10px; }
+
+.container.main {
+  position: relative;
+  top: -3em; }
+
+.image-banner {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: -1; }
+  .image-banner .image-container img {
+    min-height: 100vh;
+    max-height: 100vh;
+    max-width: unset; }
+  .image-banner .banner-content {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid #c1272d;
+    display: flex;
+    padding: 20px;
+    position: absolute;
+    top: 30vh;
+    right: 30px; }
+
+.image-container {
+  overflow: hidden; }
+  .image-container img {
+    height: auto;
+    min-height: 100%;
+    max-height: 100%;
+    width: auto;
+    min-width: 100%;
+    max-width: 100%; }
+
+.countdown-timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20px; }
+  .countdown-timer .numbers, .countdown-timer .labels {
+    display: flex;
+    justify-content: space-between; }
+  .countdown-timer .numbers {
+    font-size: 2em;
+    padding: 0 0.5em 0.7em; }
+    .countdown-timer .numbers span:after {
+      content: '-';
+      margin-left: 0.5em; }
+    .countdown-timer .numbers span:last-child:after {
+      content: normal; }
+  .countdown-timer .labels {
+    font-size: 1em; }
+    .countdown-timer .labels span {
+      margin-right: 20px; }
+      .countdown-timer .labels span:last-child {
+        margin-right: 0; }
+
+.icons.social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .icons.social i {
+    font-size: 2em;
+    height: auto;
+    width: auto;
+    margin: 0 0 5px; }
+
+.content-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw; }
+  .content-blocks .content-block {
+    border-top: 2px solid #c73d42;
+    flex: 1 1 200px;
+    padding: 1em; }
+    .content-blocks .content-block:nth-child(2n) {
+      background: #f0c9cb; }
+    .content-blocks .content-block:nth-child(2n - 1) {
+      background: #f9e9ea; }
+    .content-blocks .content-block:last-child {
+      border-bottom: 2px solid #c73d42; }
+    .content-blocks .content-block h3 {
+      margin-top: 0; }
 
 /*# sourceMappingURL=../maps/style.css.map */
