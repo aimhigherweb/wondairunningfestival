@@ -1,0 +1,14 @@
+.container {
+    &.main {
+        padding: 0;
+        width: 90vw;
+    }
+}
+
+.image-banner {
+    left: calc((100vw - #{$width_inner}) / (-2));
+}
+
+.content-blocks {
+    margin-left: calc((100vw - #{$width_inner}) / (-2));
+}
