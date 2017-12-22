@@ -18,7 +18,7 @@ gulp.task('sassy', function(){
   gulp.src(mainSassFile)
     .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError)) //Using gulp-sass
-    .pipe(sourcemaps.write('../maps'))
+    .pipe(sourcemaps.write('/source/maps'))
       .pipe(gulp.dest(cssFiles))
 });
 

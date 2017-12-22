@@ -11,7 +11,7 @@
 
 get_header(); ?>
 
-<div class="container main">
+<div class="container main home">
     <div class="image-banner">
         <div class="image-container">
             <img src="<?php echo get_field('banner_image'); ?>" />
@@ -24,6 +24,12 @@ get_header(); ?>
 
                 endwhile; // End of the loop.
             ?>
+            <?php wp_nav_menu(array(
+                'theme_location' => 'social_menu',
+                'container' => 'nav',
+                'container_class' => 'menu social icons'
+                )); 
+            ?>
         </div>
     </div>
 
@@ -33,12 +39,17 @@ get_header(); ?>
                 the_post();
         ?>
             <div class="content-block">
-                <h3><?php the_title(); ?></h3>
-                <div class="icon">
-                    <img src="<?php echo get_field('icon'); ?>" />
-                </div>
+                <a href="<?php echo get_permalink(); ?>">
+                    <h3><?php the_title(); ?></h3>
+                    <div class="icons">
+                        <?php 
+                            $icon = get_field('icon');
+                            echo file_get_contents($icon);
+                        ?>
+                    </div>
+                </a>
                 <p>
-                    <?php get_the_excerpt(); ?>
+                    <?php echo get_the_excerpt(); ?>
                 </p>
             </div>
         <?php endwhile; ?>

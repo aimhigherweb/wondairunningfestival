@@ -16,20 +16,26 @@
         <link href="/wondairunnningfestival/wp-content/themes/wondairunningfestival/style.css" rel="stylesheet" />
 
         <?php wp_head(); ?>
-</head>
+    </head>
 
 <body>
     <header>
         <div class="site-logo">
-            <img src="<?php echo wp_get_attachment_image_src(get_theme_mod( 'custom_logo' ), 'full')[0]; ?>" />
+            <?php
+                $logo = wp_get_attachment_image_src(get_theme_mod( 'custom_logo' ), 'full')[0];
+                echo file_get_contents($logo);
+            ?>
         </div>
 
-        <?php wp_nav_menu(array(
-            'theme_location' => 'main_menu',
-            'container' => 'nav',
-            'container_class' => 'menu main'
-            )); 
-        ?>
+        <div id="nav-main" class="nav-main">
+            <button class="hamburger" onClick='mobileMenu()'><span class="open">&#x2630</span><span class="close">&#xd7</span></button>
+            <?php wp_nav_menu(array(
+                'theme_location' => 'main_menu',
+                'container' => 'nav',
+                'container_class' => 'menu main'
+                )); 
+            ?>
+        </div>
     </header>
 
     <div class="wrap">
