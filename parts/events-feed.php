@@ -13,6 +13,9 @@
 <div class="content-blocks">
     <?php query_posts(array(
         'post_type' => 'event',
+        'meta_key' => 'date',
+        'orderby' => 'meta_value',
+        'order' => 'ASC'
         ));
         while (have_posts()) :
             the_post();

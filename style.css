@@ -105,9 +105,9 @@ nav ul {
   width: 40px; }
 
 a i:hover, a svg:hover {
+  border: none;
   cursor: pointer;
-  fill: #c1272d;
-  stroke: #c1272d; }
+  fill: #c1272d; }
 
 form {
   border: 1px solid #e09396;
@@ -163,13 +163,51 @@ header {
   color: #611417;
   display: block;
   font: 400 1.5em "Alegreya", serif;
-  font-size: 1em;
-  margin: 0 10px;
-  padding: 10px 0 12px;
+  font-size: 1.5em;
+  padding: 10px 20px 12px;
   text-decoration: none; }
   .menu.main li a:active, .menu.main li a:hover, .menu.main li a:focus {
-    border-bottom: 2px solid #611417;
-    padding-bottom: 10px; }
+    background: #611417;
+    color: #fff; }
+
+.nav-main .hamburger {
+  border: none;
+  height: 3.5em;
+  width: 3.5em;
+  padding: 0;
+  text-align: center; }
+  .nav-main .hamburger:active span, .nav-main .hamburger:hover span, .nav-main .hamburger:focus span {
+    color: #fff; }
+  .nav-main .hamburger .open {
+    display: block;
+    font-size: 1.5em; }
+  .nav-main .hamburger .close {
+    display: none;
+    font-size: 1.8em; }
+
+.nav-main nav {
+  display: none; }
+
+.nav-main.active .hamburger {
+  background: #611417; }
+  .nav-main.active .hamburger span {
+    color: #fff; }
+  .nav-main.active .hamburger .open {
+    display: none; }
+  .nav-main.active .hamburger .close {
+    display: block; }
+
+.nav-main.active nav {
+  background: #f9e9ea;
+  display: block;
+  position: absolute;
+  top: 15vh;
+  left: 0;
+  width: 100vw; }
+  .nav-main.active nav ul li {
+    border-top: 2px solid #611417; }
+    .nav-main.active nav ul li:last-child {
+      border-bottom: 2px solid #611417; }
 
 .container.main {
   padding: 0 10px;
@@ -266,9 +304,11 @@ header {
     .content-blocks .content-block:last-child {
       border-bottom: 2px solid #c73d42; }
     .content-blocks .content-block h3 {
-      margin-top: 0; }
+      margin-top: 0;
+      text-align: center; }
 
 .events-feed .content-blocks {
+  margin-left: 0;
   width: 100%; }
 
 .events-feed .content-block {
@@ -326,5 +366,10 @@ footer .aimhigher {
     fill: #1c75bc; }
   footer .aimhigher a:active svg .cls-2, footer .aimhigher a:hover svg .cls-2, footer .aimhigher a:focus svg .cls-2 {
     fill: #16a6b1; }
+
+@media screen and (min-width: 40rem) {
+  .menu.main li a:active, .menu.main li a:hover, .menu.main li a:focus {
+    border-bottom: 2px solid #611417;
+    padding-bottom: 10px; } }
 
 /*# sourceMappingURL=source/maps/style.css.map */

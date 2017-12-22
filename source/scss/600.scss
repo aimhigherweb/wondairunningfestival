@@ -1,0 +1,12 @@
+.menu {
+    &.main {
+        li {
+            a {
+                &:active, &:hover, &:focus {
+                    border-bottom: 2px solid $red_dark_50;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+}

@@ -134,9 +134,9 @@ nav {
 a {
     i, svg {
         &:hover {
+            border: none;
             cursor: pointer;
             fill: $red;
-            stroke: $red;
         }
     }
 }

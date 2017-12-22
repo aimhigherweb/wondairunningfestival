@@ -25,19 +25,90 @@ header {
 
         }
 
-        li {
+        li {           
             a {
                 color: $red_dark_50;
                 display: block;
                 font: $font_headings;
-                font-size: 1em;
-                margin: 0 10px;
-                padding: 10px 0 12px;
+                // font-size: 1em;
+                font-size: 1.5em;
+                // margin: 0 10px;
+                // padding: 10px 0 12px;
+                padding: 10px 20px 12px;
                 text-decoration: none;
 
                 &:active, &:hover, &:focus {
-                    border-bottom: 2px solid $red_dark_50;
-                    padding-bottom: 10px;
+                    background: $red_dark_50;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.nav-main {
+    .hamburger {
+        border: none;
+        height: 3.5em;
+        width: 3.5em;
+        padding: 0;
+        text-align: center;
+
+        &:active, &:hover, &:focus {
+            span {
+                color: #fff;
+            }
+        }
+
+        .open {
+            display: block;
+            font-size: 1.5em;
+        }
+    
+        .close {
+            display: none;
+            font-size: 1.8em;
+        }
+    }
+
+    nav {
+        display: none;
+    }
+
+    &.active {
+        
+
+        .hamburger {
+            background: $red_dark_50;
+            
+            span {
+                color: #fff;
+            }
+
+            .open {
+                display: none;
+            }
+        
+            .close {
+                display: block;
+            }
+        }
+
+        nav {
+            background: $red_light_10;
+            display: block;
+            position: absolute;
+                top: $height_header;
+                left: 0;
+            width: 100vw;
+
+            ul {
+                li {
+                    border-top: 2px solid $red_dark_50;
+                    
+                    &:last-child {
+                        border-bottom: 2px solid $red_dark_50;
+                    }
                 }
             }
         }
@@ -186,12 +257,14 @@ header {
 
         h3 {
             margin-top: 0;
+            text-align: center;
         }
     }
 }
 
 .events-feed {
     .content-blocks {
+        margin-left: 0;
         width: 100%;
     }
 
