@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Content Page with Events Feed
+ * Template Name: Content Page without Events Feed
  * 
  * The template file for the homepage
  *
@@ -11,7 +11,7 @@
 
 get_header(); ?>
 
-<div class="container main events-feed">
+<div class="container main">
     <h1 class="page-title"><?php the_title(); ?></h1>
     <div class="content">
         <?php  
@@ -20,16 +20,6 @@ get_header(); ?>
             endwhile;
         ?>
     </div>
-
-    <?php if (is_active_sidebar('events-feed')) : ?>
-    
-        <div class="events-feed">
-            
-            <?php dynamic_sidebar('events-feed'); ?>
-
-        </div>
-    
-    <?php endif; ?>
 </div>
 
 <?php get_footer();

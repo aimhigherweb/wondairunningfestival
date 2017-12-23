@@ -33,26 +33,28 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="content-blocks">
-        <?php query_posts('cat=2');
-            while (have_posts()) :
-                the_post();
-        ?>
-            <div class="content-block">
-                <a href="<?php echo get_permalink(); ?>">
-                    <h3><?php the_title(); ?></h3>
-                    <div class="icons">
-                        <?php 
-                            $icon = get_field('icon');
-                            echo file_get_contents($icon);
-                        ?>
-                    </div>
-                </a>
-                <p>
-                    <?php echo get_the_excerpt(); ?>
-                </p>
-            </div>
-        <?php endwhile; ?>
+    <div class="container home-blocks">
+        <div class="content-blocks">
+            <?php query_posts('cat=2');
+                while (have_posts()) :
+                    the_post();
+            ?>
+                <div class="content-block">
+                    <a href="<?php echo get_permalink(); ?>">
+                        <h3><?php the_title(); ?></h3>
+                        <div class="icons">
+                            <?php 
+                                $icon = get_field('icon');
+                                echo file_get_contents($icon);
+                            ?>
+                        </div>
+                    </a>
+                    <p>
+                        <?php echo get_the_excerpt(); ?>
+                    </p>
+                </div>
+            <?php endwhile; ?>
+        </div>
     </div>
 </div>
 
