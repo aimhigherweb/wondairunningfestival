@@ -26,6 +26,16 @@
         'after_title' => '</h3>',
     ));
 
+    // All Routes Map Widget Area
+    register_sidebar(array(
+        'id' => 'routes-map',
+        'name' => 'Routes Map',
+        'before_widget' => '<div class = "widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+
     // Hide the widget titles
     add_filter('widget_title','my_widget_title'); 
 

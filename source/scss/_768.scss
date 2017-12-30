@@ -11,6 +11,16 @@ header {
     }
 }
 
+body {
+    &.scrolled {
+        header {
+            .site-logo {
+                height: 100%;
+            }
+        }
+    }
+}
+
 .menu {
     &.main {
         li {
@@ -27,7 +37,28 @@ header {
 
 .content {
     text-align: right;
-    padding-left: 30vh;
+    padding-left: 30vh;   
+}
+
+.single-event {
+    .content {
+        padding-left: 0;
+
+        .details {
+            flex-basis: 230px;
+            margin-right: 20px;
+            padding-top: 10vh;
+        }
+
+        .map {
+            flex-grow: 2;
+            max-height: 40rem;
+        }
+
+        .btn {
+            text-align: center;
+        }
+    }
 }
 
 .social-feed {

@@ -18,7 +18,7 @@
         <?php wp_head(); ?>
     </head>
 
-<body>
+<body id="root" class="<?php if(is_front_page()) {echo 'home';}; ?>">
     <header>
         <div class="wrap">
             <div class="site-logo">

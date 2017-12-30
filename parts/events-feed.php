@@ -9,7 +9,8 @@
 
 ?>
 
-<p>Our running festival will have the following events:</p>
+<p>Our running festival will have the following events:</p> 
+
 <div class="content-blocks">
     <?php query_posts(array(
         'post_type' => 'event',

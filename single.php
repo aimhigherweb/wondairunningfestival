@@ -27,6 +27,16 @@ get_header(); ?>
             
             <?php dynamic_sidebar('events-feed'); ?>
 
+            <?php if (strpos($_SERVER['REQUEST_URI'], "event") == false) : ?>
+    
+                <div class="map-container">
+                    
+                    <?php dynamic_sidebar('routes-map'); ?>
+
+                </div>
+            
+            <?php endif; ?>
+
         </div>
     
     <?php endif; ?>
