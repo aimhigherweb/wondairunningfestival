@@ -7,7 +7,8 @@
     "url": "git@github.com:AimHigher-Web-Design/wondairunningfestival.git"
   },
   "scripts": {
-    "start": "gulp sassy && gulp watch"
+    "start": "gulp sassy && gulp watch",
+    "build": "gulp sassy"
   },
   "author": "AimHigher Web Design",
   "bugs": {
