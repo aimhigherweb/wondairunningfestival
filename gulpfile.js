@@ -2,29 +2,17 @@
 var gulp = require('gulp');
 
 var sass = require('gulp-sass');
-var minifycss    = require('gulp-uglifycss');
-var autoprefixer = require('gulp-autoprefixer'); 
 var sourcemaps = require('gulp-sourcemaps');
-const AUTOPREFIXER_BROWSERS = ['> 5%'];
 
-var filter       = require('gulp-filter');
 var replace = require('gulp-replace');
-var replaceString = require('gulp-string-replace');
-
-var browserSync = require('browser-sync').create();
-var reload      = browserSync.reload;
-
 
 //File Paths
 var sassFiles = 'source/scss/**/*.scss',
     mainSassFile = 'source/scss/style.scss',
     cssFiles = '',
     sourceMaps = '/source/maps',
-    localHostPath = '/wp-content/',
-    remotePath = '/wp-content/',
-    pathFiles ='*',
-    files = './**/*.php',
-    localUrl = 'http://wondaicountryfestival.local';
+    styleSheet = '/wp-content/themes/wondairunningfestival/style.css';
+    currentDate = new Date().toISOString();
 
 //Compile main sass into css
 gulp.task('sassy', function(){
@@ -39,35 +27,13 @@ gulp.task('sassy', function(){
 
 //Watch for changes in sass files and running sass compile
 gulp.task('watch', function() {
-  // gulp.watch(files, reload);
   gulp.watch(sassFiles, ['sassy']);
 });
 
-//Browser sync watch for file changes
-gulp.task( 'browser-sync', function() {
-  browserSync.init( {
-    proxy: localUrl,
-    open: true,
-    injectChanges: true,
-  } );
-});
+gulp.task('styleVersion', function() {
+  var thisVersion = styleSheet + '?v=' + currentDate;
 
-//Replace file paths for local host with remote server
-gulp.task('replaceLocalDev', function(){
-  gulp.src([pathFiles, '!gulpfile.js'])
-    .pipe(replace(localHostPath, remotePath))
-    .pipe(gulp.dest('./'));
-
-  gulp.src([sassFiles, '!gulpfile.js'])
-    .pipe(replaceString(localHostPath, remotePath))
-    .pipe(gulp.dest('source/scss/'));
-
-  gulp.start('sassy');
-
-  gulp.src( cssFiles )
-  .pipe( filter( '*.css' ) )
-  .pipe( minifycss( {
-    maxLineLen: 10
-  }))
-  .pipe( gulp.dest( cssFiles ) )
+  gulp.src(['header.php'])
+    .pipe(replace(styleSheet, thisVersion))
+    .pipe(gulp.dest('./'))
 });

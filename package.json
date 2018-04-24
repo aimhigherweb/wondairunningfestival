@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "gulp sassy && gulp watch",
-    "build": "gulp sassy"
+    "build": "gulp sassy && gulp styleVersion"
   },
   "author": "AimHigher Web Design",
   "bugs": {
@@ -19,15 +19,9 @@
     "outdatedbrowser": "^1.1.5"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-filter": "^5.1.0",
     "gulp-replace": "^0.6.1",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-string-replace": "^0.4.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-uglifycss": "^1.0.9"
+    "gulp-sourcemaps": "^2.6.1"
   }
 }
