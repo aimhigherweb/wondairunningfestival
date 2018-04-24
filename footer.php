@@ -10,18 +10,16 @@
 ?>
 
 		</div><!-- #content -->
-
 		
-			<?php if (is_active_sidebar('social-feed')) : ?>
+		<?php if (is_active_sidebar('sponsors')) : ?>
 			
-				<div class="social-feed">
-					
-					<?php dynamic_sidebar('social-feed'); ?>
+			<div class="sponsors">
+				
+				<?php dynamic_sidebar('sponsors'); ?>
 
-				</div>
-			
-			<?php endif; ?>
+			</div>
 		
+		<?php endif; ?>
 
 		<footer>			
 			<?php wp_nav_menu(array(
