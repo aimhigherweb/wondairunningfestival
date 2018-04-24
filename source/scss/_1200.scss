@@ -1,0 +1,18 @@
+.container {
+    &.main {
+        padding: 0;
+    }
+
+    &.home-blocks {
+        margin-left: calc((100vw - #{$width_inner}) / (-2));
+    }
+}
+
+.image-banner {
+    left: calc((100vw - #{$width_inner}) / (-2));
+
+    .banner-content {
+        right:  calc(((100vw - #{$width_inner}) / (2)) + 30px);
+    }
+}
+
