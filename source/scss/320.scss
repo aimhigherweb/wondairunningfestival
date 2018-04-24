@@ -481,6 +481,39 @@ body {
     // max-width: $width_inner;
 }
 
+.sponsors {
+    padding: 30px 20px;
+    position: relative;
+    z-index: 50;
+
+    .gallery {
+        display: flex;
+            justify-content: space-between;
+
+        figure {
+            display: flex;
+                flex-direction: column;
+                justify-content: center;
+            height: calc(150px + 1em + 15px);
+            position: relative;
+            width: 150px !important;
+
+            img {
+                opacity: 0.5;
+                height: auto;
+                    max-height: 150px;
+                width: auto;
+                    max-width: 150px;
+            }
+
+            figcaption {
+                position: absolute;
+                    bottom: 0;
+            }
+        }
+    }
+}
+
 footer {
     display: flex;
         flex-wrap: wrap;

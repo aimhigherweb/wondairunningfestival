@@ -442,6 +442,30 @@ body .wpmf-gallerys .gallery-galler-masonry {
   margin: 0 auto;
   width: 100%; }
 
+.sponsors {
+  padding: 30px 20px;
+  position: relative;
+  z-index: 50; }
+  .sponsors .gallery {
+    display: flex;
+    justify-content: space-between; }
+    .sponsors .gallery figure {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: calc(150px + 1em + 15px);
+      position: relative;
+      width: 150px !important; }
+      .sponsors .gallery figure img {
+        opacity: 0.5;
+        height: auto;
+        max-height: 150px;
+        width: auto;
+        max-width: 150px; }
+      .sponsors .gallery figure figcaption {
+        position: absolute;
+        bottom: 0; }
+
 footer {
   display: flex;
   flex-wrap: wrap;
