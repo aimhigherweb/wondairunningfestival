@@ -11,6 +11,16 @@ header {
     }
 }
 
+.menu {
+    &.main {
+        li {
+            a {
+                font-size: 1.3em;
+            }
+        }
+    }
+}
+
 body {
     &.scrolled {
         header {
@@ -18,15 +28,9 @@ body {
                 height: 100%;
             }
         }
-    }
-}
 
-.menu {
-    &.main {
-        li {
-            a {
-                font-size: 2em;
-            }
+        .content {
+            padding-left: 0;   
         }
     }
 }
@@ -64,4 +68,3 @@ body {
 .social-feed {
     padding: 0;
 }
-

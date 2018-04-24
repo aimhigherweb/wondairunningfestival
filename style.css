@@ -5,7 +5,6 @@ Description: Custom Template for Wondai Country Running Festival
 Version: 0.0.1
 */
 @import url("https://fonts.googleapis.com/css?family=Alegreya:500,700,800,900");
-@import url("https://fonts.googleapis.com/css?family=Alegreya:500,700,800,900");
 * {
   box-sizing: border-box;
   color: #191919;
@@ -175,6 +174,9 @@ body.home.scrolled header {
   background: rgba(255, 255, 255, 0.7);
   background: linear-gradient(rgba(255, 255, 255, 0.8), transparent); }
 
+body .wpmf-gallerys .gallery-galler-masonry {
+  visibility: visible; }
+
 .menu.main li a {
   color: #611417;
   display: block;
@@ -243,9 +245,23 @@ body.home.scrolled header {
 .container.home-blocks {
   margin-left: -10px;
   position: relative;
-  top: -19vh;
+  top: -18vh;
   overflow: hidden;
   width: 100vw; }
+
+.content .wpmf-gallerys .gallery.gallery-masonry {
+  visibility: visible; }
+  .content .wpmf-gallerys .gallery.gallery-masonry .gallery-icon {
+    height: 280px;
+    margin: 10px;
+    overflow: hidden;
+    width: 280px; }
+    .content .wpmf-gallerys .gallery.gallery-masonry .gallery-icon img {
+      height: auto;
+      min-height: 100%;
+      width: auto;
+      max-width: 100%;
+      min-width: 100%; }
 
 .image-banner {
   height: 100vh;
@@ -424,22 +440,50 @@ body.home.scrolled header {
 
 .social-feed {
   margin: 0 auto;
-  padding: 0 10px;
-  max-width: 75rem; }
+  width: 100%; }
 
 footer {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
-  max-width: 75rem; }
-  footer .menu.social {
-    margin-left: auto;
+  max-width: 75rem;
+  position: relative;
+  z-index: 50; }
+  footer nav.menu {
+    width: 100%;
     max-width: 400px; }
-    footer .menu.social ul {
+    footer nav.menu ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       flex-direction: row;
-      padding: 30px; }
+      font-size: 12px;
+      padding: 30px 20px 20px;
+      width: 100%; }
+    footer nav.menu.social ul {
+      flex-direction: row; }
+    footer nav.menu.footer i {
+      height: 15px;
+      margin: 5px;
+      width: 15px; }
+  footer .logo {
+    display: flex;
+    padding: 0 20px 20px;
+    width: 100%; }
+    footer .logo img {
+      opacity: 0.5; }
+    footer .logo a {
+      display: block;
+      width: 60%;
+      max-width: 200px; }
+      footer .logo a:active img, footer .logo a:hover img, footer .logo a:focus img {
+        opacity: 1; }
+    footer .logo h3 {
+      font-size: 0.8em;
+      margin-left: 20px;
+      width: 40%; }
   footer .aimhigher {
-    max-width: 200px;
-    margin-left: auto;
-    padding: 0 20px 20px; }
+    justify-content: flex-end; }
     footer .aimhigher svg .cls-1, footer .aimhigher svg .cls-2 {
       fill: #d15d62; }
     footer .aimhigher a:active svg .cls-1, footer .aimhigher a:hover svg .cls-1, footer .aimhigher a:focus svg .cls-1 {
@@ -447,7 +491,17 @@ footer {
     footer .aimhigher a:active svg .cls-2, footer .aimhigher a:hover svg .cls-2, footer .aimhigher a:focus svg .cls-2 {
       fill: #16a6b1; }
 
-@media screen and (min-width: 40rem) {
+@media (min-width: 31rem) {
+  footer nav.menu.social {
+    width: 40%; }
+  footer nav.menu.footer {
+    width: 60%; }
+  footer .logo.sbrc {
+    width: 60%; }
+  footer .logo.aimhigher {
+    width: 40%; } }
+
+@media (min-width: 40rem) {
   .menu.main ul {
     display: flex; }
   .menu.main li a {
@@ -464,9 +518,15 @@ footer {
   .nav-main nav {
     display: block; }
   .events-feed .content-block .pricing {
-    margin: 20px 0; } }
+    margin: 20px 0; }
+  footer {
+    justify-content: space-between; }
+    footer nav.menu.footer {
+      width: 40%; }
+    footer .logo.sbrc {
+      width: 40%; } }
 
-@media screen and (min-width: 48rem) {
+@media (min-width: 48rem) {
   header .wrap {
     justify-content: flex-end; }
   header .site-logo {
@@ -474,10 +534,12 @@ footer {
     top: 0;
     left: 0;
     height: 30vh; }
+  .menu.main li a {
+    font-size: 1.3em; }
   body.scrolled header .site-logo {
     height: 100%; }
-  .menu.main li a {
-    font-size: 2em; }
+  body.scrolled .content {
+    padding-left: 0; }
   .page-title {
     text-align: right; }
   .content {
@@ -497,7 +559,9 @@ footer {
   .social-feed {
     padding: 0; } }
 
-@media screen and (min-width: 75rem) {
+@media (min-width: 75rem) {
+  .menu.main li a {
+    font-size: 2em; }
   .container.main {
     padding: 0; }
   .container.home-blocks {

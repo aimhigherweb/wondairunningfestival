@@ -39,6 +39,12 @@ body {
             }
         }
     }
+	
+	.wpmf-gallerys {
+		.gallery-galler-masonry {
+			visibility: visible;
+		}
+	}
 }
 
 .menu {
@@ -157,9 +163,34 @@ body {
     &.home-blocks {
         margin-left: -10px;
         position: relative;
-            top: -19vh;
+            top: -18vh;
         overflow: hidden;
         width: 100vw;
+    }
+}
+
+.content {
+    .wpmf-gallerys {
+        .gallery {
+            &.gallery-masonry {
+                visibility: visible;
+
+                .gallery-icon {
+                    height: 280px;
+                    margin: 10px;
+                    overflow: hidden;
+                    width: 280px;
+
+                    img {
+                        height: auto;
+                            min-height: 100%;
+                        width: auto;
+                            max-width: 100%;
+                            min-width: 100%;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -445,30 +476,78 @@ body {
 
 .social-feed {
     margin: 0 auto;
-    padding: 0 10px;
-    max-width: $width_inner;
+    // padding: 0 10px;
+    width: 100%;
+    // max-width: $width_inner;
 }
 
 footer {
+    display: flex;
+        flex-wrap: wrap;
     margin: 0 auto;
     max-width: $width_inner;
+    position: relative;
+    z-index: 50;
 
-    .menu {
-        &.social {
-            margin-left: auto;
+    nav.menu {
+        width: 100%;
             max-width: 400px;
 
+        ul {
+            display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+            font-size: 12px;
+            padding: 30px 20px 20px;
+            width: 100%;
+        }
+
+        &.social {
             ul {
                 flex-direction: row;
-                padding: 30px;
+            }
+        }
+
+        &.footer {
+            i {
+                height: 15px;
+                margin: 5px;
+                width: 15px;
             }
         }
     }
 
-    .aimhigher {
-        max-width: 200px;
-        margin-left: auto;
+    .logo {
+        display: flex;
         padding: 0 20px 20px;
+        width: 100%;
+
+        img {
+            opacity: 0.5;
+        }
+
+        a {
+            display: block;
+            width: 60%;
+                max-width: 200px;
+
+            &:active, &:hover, &:focus {
+                img {
+                    opacity: 1
+                }
+            }
+        }
+
+        h3 {
+            font-size: 0.8em;
+            margin-left: 20px;
+            width: 40%;
+        }
+    }
+
+    .aimhigher {
+        justify-content: flex-end;
 
         svg {
             .cls-1, .cls-2 {

@@ -16,6 +16,16 @@
         'after_title' => '</h3>',
     ));
 
+    // Social Feed Widget Area
+    register_sidebar(array(
+        'id' => 'sponsors',
+        'name' => 'Sponsors',
+        'before_widget' => '<div class = "widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+
     // Event Blocks Widget Area
     register_sidebar(array(
         'id' => 'events-feed',

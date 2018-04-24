@@ -23,7 +23,8 @@ var sassFiles = 'source/scss/**/*.scss',
     localHostPath = '/wp-content/',
     remotePath = '/wp-content/',
     pathFiles ='*',
-    files = './**/*.php';
+    files = './**/*.php',
+    localUrl = 'http://wondaicountryfestival.local';
 
 //Compile main sass into css
 gulp.task('sassy', function(){
@@ -45,7 +46,7 @@ gulp.task('watch', function() {
 //Browser sync watch for file changes
 gulp.task( 'browser-sync', function() {
   browserSync.init( {
-    proxy: 'http://owlkeyme.local',
+    proxy: localUrl,
     open: true,
     injectChanges: true,
   } );

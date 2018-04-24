@@ -40,7 +40,14 @@ get_header(); ?>
                     the_post();
             ?>
                 <div class="content-block">
-                    <a href="<?php echo get_permalink(); ?>">
+                    <a <?php 
+                        if(get_field('custom_permalink')) {
+                            echo 'href="' . get_field('custom_permalink') . '" target="_blank"';
+                        }
+                        else {
+                            echo 'href="' . get_permalink() . '"';
+                        };
+                    ?>>
                         <h3><?php the_title(); ?></h3>
                         <div class="icons">
                             <?php 

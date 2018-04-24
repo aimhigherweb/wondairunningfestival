@@ -41,3 +41,19 @@
         }
     }
 }
+
+footer {
+    justify-content: space-between;
+
+    nav.menu {
+        &.footer {
+            width: 40%;
+        }
+    }
+
+    .logo {
+        &.sbrc {
+            width: 40%;
+        }
+    }
+}
