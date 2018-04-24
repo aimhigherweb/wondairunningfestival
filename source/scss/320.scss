@@ -488,15 +488,17 @@ body {
 
     .gallery {
         display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
 
         figure {
             display: flex;
                 flex-direction: column;
                 justify-content: center;
+            flex: 0 1 150px;
             height: calc(150px + 1em + 15px);
             position: relative;
-            width: 150px !important;
+            max-width: 150px;
 
             img {
                 opacity: 0.5;
