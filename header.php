@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="profile" href="http://gmpg.org/xfn/11" />
 
-        <link href="/wondairunnningfestival/wp-content/themes/wondairunningfestival/style.css" rel="stylesheet" />
+        <link href="/wp-content/themes/wondairunningfestival/style.css" rel="stylesheet" />
 
         <?php wp_head(); ?>
     </head>

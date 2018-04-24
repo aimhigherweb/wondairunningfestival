@@ -58,7 +58,7 @@ get_header(); ?>
     </div>
 </div>
 
-<script type="text/javascript" src="/wondairunnningfestival/wp-content/themes/wondairunningfestival/resources/js/countdown.js" ></script>
+<script type="text/javascript" src="/wp-content/themes/wondairunningfestival/resources/js/countdown.js" ></script>
 
 <?php 
     get_footer(); 
