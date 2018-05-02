@@ -14,6 +14,16 @@
         <link rel="profile" href="http://gmpg.org/xfn/11" />
 
         <link href="/wp-content/themes/wondairunningfestival/style.css" rel="stylesheet" />
+        <title>Wondai Country Running Festival</title>
+        <meta name="description" content="The Running Festival associated with the Wondai Country Running Festival, including a full and half marathon" />
+
+        <meta property="og:title" content="Wondai Country Running Festival" />
+        <meta property="og:image" content="http://wondaicountryfestival.local/wp-content/uploads/2017/12/Ros-Heit-0885C502-E907-4E59-BB8A-BEFD8EF3D648.jpeg" />
+        <meta property="og:description" content="The Running Festival associated with the Wondai Country Running Festival, including a full and half marathon" />
+
+        <meta name="twitter:title" content="Wondai Country Running Festival" />
+        <meta name="twitter:description" content="The Running Festival associated with the Wondai Country Running Festival, including a full and half marathon" />
+        <meta name="twitter:image" content="http://wondaicountryfestival.local/wp-content/uploads/2017/12/Ros-Heit-0885C502-E907-4E59-BB8A-BEFD8EF3D648.jpeg" />
 
         <?php wp_head(); ?>
     </head>
