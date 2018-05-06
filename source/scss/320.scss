@@ -486,12 +486,12 @@ body {
     position: relative;
     z-index: 50;
 
-    .slides {
+    .ms-container {
         display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
 
-        .ms-image {
+        .ms-slide {
             display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -499,6 +499,10 @@ body {
             height: calc(150px + 1em + 15px);
             position: relative;
             max-width: 150px;
+
+            .ms-slide-bgcont {
+                max-height: 100%;
+            }
 
             img {
                 opacity: 0.5;
