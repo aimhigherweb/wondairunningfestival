@@ -450,7 +450,7 @@ body .wpmf-gallerys .gallery-galler-masonry {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
-    .sponsors .owl-stage .owl-item, .sponsors .owl-stage figure {
+    .sponsors .owl-stage figure {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -458,13 +458,13 @@ body .wpmf-gallerys .gallery-galler-masonry {
       height: calc(150px + 1em + 15px);
       position: relative;
       max-width: 150px; }
-      .sponsors .owl-stage .owl-item img, .sponsors .owl-stage figure img {
+      .sponsors .owl-stage figure img {
         opacity: 0.5;
         height: auto;
         max-height: 100%;
         width: auto;
         max-width: 100%; }
-      .sponsors .owl-stage .owl-item figcaption, .sponsors .owl-stage figure figcaption {
+      .sponsors .owl-stage figure figcaption {
         position: absolute;
         bottom: 0; }
 
