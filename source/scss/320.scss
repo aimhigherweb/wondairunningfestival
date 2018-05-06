@@ -486,12 +486,12 @@ body {
     position: relative;
     z-index: 50;
 
-    .gallery {
+    .slides {
         display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
 
-        figure {
+        .ms-image {
             display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -508,7 +508,7 @@ body {
                     max-width: 100%;
             }
 
-            figcaption {
+            .caption {
                 position: absolute;
                     bottom: 0;
             }
