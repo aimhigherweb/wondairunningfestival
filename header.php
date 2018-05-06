@@ -14,6 +14,7 @@
         <link rel="profile" href="http://gmpg.org/xfn/11" />
 
         <link href="/wp-content/themes/wondairunningfestival/style.css" rel="stylesheet" />
+        
         <title>Wondai Country Running Festival</title>
         <meta name="description" content="The Running Festival associated with the Wondai Country Running Festival, including a full and half marathon" />
 
