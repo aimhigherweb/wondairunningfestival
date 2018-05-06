@@ -446,11 +446,11 @@ body .wpmf-gallerys .gallery-galler-masonry {
   padding: 30px 20px;
   position: relative;
   z-index: 50; }
-  .sponsors .ms-container {
+  .sponsors .owl-stage {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
-    .sponsors .ms-container .ms-slide {
+    .sponsors .owl-stage .owl-item, .sponsors .owl-stage figure {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -458,15 +458,13 @@ body .wpmf-gallerys .gallery-galler-masonry {
       height: calc(150px + 1em + 15px);
       position: relative;
       max-width: 150px; }
-      .sponsors .ms-container .ms-slide .ms-slide-bgcont {
-        max-height: 100%; }
-      .sponsors .ms-container .ms-slide img {
+      .sponsors .owl-stage .owl-item img, .sponsors .owl-stage figure img {
         opacity: 0.5;
         height: auto;
         max-height: 100%;
         width: auto;
         max-width: 100%; }
-      .sponsors .ms-container .ms-slide .caption {
+      .sponsors .owl-stage .owl-item figcaption, .sponsors .owl-stage figure figcaption {
         position: absolute;
         bottom: 0; }
 

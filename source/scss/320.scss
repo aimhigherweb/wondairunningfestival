@@ -486,12 +486,12 @@ body {
     position: relative;
     z-index: 50;
 
-    .ms-container {
+    .owl-stage {
         display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
 
-        .ms-slide {
+        .owl-item, figure {
             display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -499,10 +499,6 @@ body {
             height: calc(150px + 1em + 15px);
             position: relative;
             max-width: 150px;
-
-            .ms-slide-bgcont {
-                max-height: 100%;
-            }
 
             img {
                 opacity: 0.5;
@@ -512,7 +508,7 @@ body {
                     max-width: 100%;
             }
 
-            .caption {
+            figcaption {
                 position: absolute;
                     bottom: 0;
             }
