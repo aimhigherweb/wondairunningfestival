@@ -55,6 +55,6 @@
 
 		<script src="https://use.fontawesome.com/e86fd8a628.js"></script>
 		<script type="text/javascript" src="/wp-content/themes/wondairunningfestival/resources/js/main.js" ></script>
-
+		<?php wp_footer(); ?>
     </body>
 </html>
