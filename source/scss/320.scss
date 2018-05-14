@@ -486,12 +486,12 @@ body {
     position: relative;
     z-index: 50;
 
-    .owl-carousel {
+    .owl-stage {
         display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
 
-        .sa_hover_container {
+        .owl-item {
             display: flex;
                 flex-direction: column;
                 justify-content: center;
