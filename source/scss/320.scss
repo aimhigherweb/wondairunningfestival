@@ -500,6 +500,10 @@ body {
             position: relative;
             max-width: 150px;
 
+            figure {
+                margin: 0;
+            }
+
             img {
                 opacity: 0.5;
                 height: auto;
