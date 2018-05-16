@@ -486,12 +486,12 @@ body {
     position: relative;
     z-index: 50;
 
-    .owl-stage {
+    .slick-track {
         display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
 
-        .owl-item {
+        .slick-slide {
             display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -500,23 +500,45 @@ body {
             position: relative;
             max-width: 150px;
 
-            figure {
-                margin: 0;
+            a {
+                height: auto;
             }
 
             img {
                 opacity: 0.5;
-                height: auto;
+                height: auto !important;
                     max-height: 100%;
-                width: auto;
+                width: auto !important;
                     max-width: 100%;
             }
 
-            figcaption {
+            .msacwl-gallery-caption {
+                background: none;
+                border: none;
+                border-left: 3px solid $orange;
+                color: $red_dark_90;
+                padding: 5px 5px 5px 10px;
+                text-align: left;
+            }
+
+            span {
+                color: $red_dark_90;
                 position: absolute;
                     bottom: 0;
+
+                &.image_title {
+                    display: none;
+                }
             }
         }
+    }
+
+    .slick-arrow {
+        background-color: rgba($red, 0.2);
+    }
+
+    .slick-dots, .slick-arrow {
+        display: none !important;
     }
 }
 

@@ -446,11 +446,11 @@ body .wpmf-gallerys .gallery-galler-masonry {
   padding: 30px 20px;
   position: relative;
   z-index: 50; }
-  .sponsors .owl-stage {
+  .sponsors .slick-track {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
-    .sponsors .owl-stage figure {
+    .sponsors .slick-track .slick-slide {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -458,15 +458,31 @@ body .wpmf-gallerys .gallery-galler-masonry {
       height: calc(150px + 1em + 15px);
       position: relative;
       max-width: 150px; }
-      .sponsors .owl-stage figure img {
+      .sponsors .slick-track .slick-slide a {
+        height: auto; }
+      .sponsors .slick-track .slick-slide img {
         opacity: 0.5;
-        height: auto;
+        height: auto !important;
         max-height: 100%;
-        width: auto;
+        width: auto !important;
         max-width: 100%; }
-      .sponsors .owl-stage figure figcaption {
+      .sponsors .slick-track .slick-slide .msacwl-gallery-caption {
+        background: none;
+        border: none;
+        border-left: 3px solid #f79321;
+        color: #ae2329;
+        padding: 5px 5px 5px 10px;
+        text-align: left; }
+      .sponsors .slick-track .slick-slide span {
+        color: #ae2329;
         position: absolute;
         bottom: 0; }
+        .sponsors .slick-track .slick-slide span.image_title {
+          display: none; }
+  .sponsors .slick-arrow {
+    background-color: rgba(193, 39, 45, 0.2); }
+  .sponsors .slick-dots, .sponsors .slick-arrow {
+    display: none !important; }
 
 footer {
   display: flex;
