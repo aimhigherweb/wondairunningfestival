@@ -62,7 +62,8 @@ h5 {
 }
 
 a {
-    text-decoration: none;
+    color: $red_dark_90;
+    text-decoration-skip-ink: auto;
 
     &:active, &:hover, &:focus {
         color: $orange_dark_90;
