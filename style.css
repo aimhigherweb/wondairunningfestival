@@ -56,7 +56,8 @@ h5 {
   margin-bottom: 0.5em; }
 
 a {
-  text-decoration: none; }
+  color: #ae2329;
+  text-decoration-skip-ink: auto; }
   a:active, a:hover, a:focus {
     color: #de841e; }
 

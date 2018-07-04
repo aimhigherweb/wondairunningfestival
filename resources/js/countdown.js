@@ -3,11 +3,23 @@ var event = 'June 23 2018 GMT+1000';
 var result = {};
 
 function countdownTimer(eventTime) {
-    var t = Date.parse(eventTime) - Date.parse(new Date());
-    var days = Math.floor( t / (1000*60*60*24) );
-    var weeks = Math.floor( t / (1000*60*60*24*7) );
-    var months = Math.floor( t / (1000*60*60*24*30) );
-    var remainder = t;
+    var t, days, weeks, months, remainder;
+    
+    t = Date.parse(eventTime) - Date.parse(new Date());
+    
+    if(t < 0) {
+        days = 0;
+        weeks = 0;
+        months = 0;
+        remainder = 0;  
+    }
+    else {
+        days = Math.floor( t / (1000*60*60*24) );
+        weeks = Math.floor( t / (1000*60*60*24*7) );
+        months = Math.floor( t / (1000*60*60*24*30) );
+        remainder = t;  
+    };
+    
 
     result.months = months; //Define how many months
     remainder -= (result.months * (1000*60*60*24*30)); //Remove that many months from the countdown
