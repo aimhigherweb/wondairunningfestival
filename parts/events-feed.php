@@ -1,5 +1,3 @@
-
-application/x-httpd-php events-feed.php ( PHP script text )
 <?php
 
 /**
