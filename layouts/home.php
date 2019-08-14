@@ -17,10 +17,7 @@ get_header(); ?>
             <img src="<?php echo get_field('banner_image'); ?>" />
         </div>
         <div class="banner-content home-block">
-            <div class="notice">
-                <a href="http://www.racetecresults.com/Results.aspx?CId=7&RId=656">2018 Results Here</a>
-                Countdown to 2019!
-            </div>
+            
             <?php
                 while ( have_posts() ) : the_post();
 
