@@ -1,4 +1,4 @@
-var event = 'June 22 2019 GMT+1000';
+var event = 'June 27 2020 GMT+1000';
 
 var result = {};
 
