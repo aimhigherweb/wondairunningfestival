@@ -42,6 +42,25 @@
     }
 }
 
+.product {
+    display: flex;
+    flex-wrap: wrap;
+
+    .woocommerce-product-gallery, .entry-summary {
+        flex: 1 0 auto;
+        width: 40%;
+    }
+
+    .woocommerce-product-gallery {
+        margin-right: 20px;
+        max-width: 500px;
+    }
+      
+    .woocommerce-tabs {
+        width: 100%;
+    }
+}  
+
 footer {
     justify-content: space-between;
 
@@ -52,7 +71,7 @@ footer {
     }
 
     .logo {
-        &.sbrc {
+        &.sponsor_main {
             width: 40%;
         }
     }

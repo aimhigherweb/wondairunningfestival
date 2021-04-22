@@ -36,19 +36,13 @@
                 )); 
 			?>
 
-			<div class="sbrc logo">
-				<a href="http://www.southburnett.qld.gov.au/" target="_blank" rel="nofollow">
-					<img src="/wp-content/themes/wondairunningfestival/resources/img/sbrc.jpg" />
-				</a>
-				<h3>Major Sponsor</h3>
+			<div class="sponsor_main logo">
+				
 			</div>
 
 			<div class="aimhigher logo">
-				<a href="https://aimhigherwebdesign.com.au" target="_blank" rel="nofollow">
-					<?php 
-						$logo_aimhigher = get_site_url() . '/wp-content/themes/wondairunningfestival/resources/img/aimhigher.svg';
-						echo file_get_contents($logo_aimhigher);
-					?>
+				<a href="https://aimhigherweb.design" target="_blank" rel="nofollow">
+					AimHigher Web
 				</a>
 			</div>
 		</footer>

@@ -1,39 +1,57 @@
-//Variables
-var gulp = require('gulp');
+require('dotenv').config()
 
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-
-var replace = require('gulp-replace');
+const gulp = require('gulp')
+const sass = require('gulp-dart-sass')
+const sourcemaps = require('gulp-sourcemaps')
+const replace = require('gulp-replace')
+const browserSync = require('browser-sync').create()
+const reload = browserSync.reload
 
 //File Paths
-var sassFiles = 'source/scss/**/*.scss',
-    mainSassFile = 'source/scss/style.scss',
-    cssFiles = '',
-    sourceMaps = '/source/maps',
-    styleSheet = '/wp-content/themes/wondairunningfestival/style.css';
-    currentDate = new Date().toISOString();
+const sassFiles = 'src/scss/**/*.scss',
+	mainSassFile = 'src/scss/style.scss',
+	cssFiles = '.',
+	sourceMaps = '/src/maps',
+	styleSheet = `/wp-content/themes/${process.env.THEME_NAME}/style.css`
+currentDate = new Date().toISOString()
 
-//Compile main sass into css
-gulp.task('sassy', function(){
-  gulp.src(mainSassFile)
-    .pipe(sourcemaps.init())
-      .pipe(sass().on('error', sass.logError)) //Using gulp-sass
+const sassy = () => {
+	return gulp
+		.src(mainSassFile)
+		.pipe(sourcemaps.init())
+		.pipe(sass().on('error', sass.logError))
+		.pipe(sourcemaps.write(sourceMaps))
+		.pipe(gulp.dest(cssFiles))
+}
 
-    .pipe(sourcemaps.write('/source/maps'))
-      .pipe(gulp.dest(cssFiles))
-});
+const watch = () => {
+	browserSync.init({
+		port: process.env.PORT || 3000,
+		proxy: process.env.WP_URL,
+		open: false,
+	})
 
+	gulp.watch(sassFiles, sassy)
+	gulp.watch([
+		'./*.php',
+		'./layouts/**/*.php',
+		'./partials/**/*.php',
+		'./woocommerce/**/*.php',
+		'./source/scss/**/*.scss',
+	]).on('change', reload)
+}
 
-//Watch for changes in sass files and running sass compile
-gulp.task('watch', function() {
-  gulp.watch(sassFiles, ['sassy']);
-});
+const styleVersion = () => {
+	const thisVersion = styleSheet + '?v=' + currentDate
 
-gulp.task('styleVersion', function() {
-  var thisVersion = styleSheet + '?v=' + currentDate;
+	return gulp
+		.src(['header.php'])
+		.pipe(replace(styleSheet, thisVersion))
+		.pipe(gulp.dest('./'))
+}
 
-  gulp.src(['header.php'])
-    .pipe(replace(styleSheet, thisVersion))
-    .pipe(gulp.dest('./'))
-});
+module.exports = {
+  sassy,
+  watch, 
+  styleVersion
+}

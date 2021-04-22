@@ -1,3 +1,13 @@
+.products {
+    justify-content: flex-end;
+    
+    li {
+        width: 40%;
+    }
+}
+
+
+
 footer {
     nav.menu {
         &.social {
@@ -10,7 +20,7 @@ footer {
     }
 
     .logo {
-        &.sbrc {
+        &.sponsor_main {
             width: 60%;
         }
 

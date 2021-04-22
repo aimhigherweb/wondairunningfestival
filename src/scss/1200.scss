@@ -8,6 +8,16 @@
     }
 }
 
+body {
+    &.scrolled {
+        .product {
+            .woocommerce-product-gallery {
+                margin-top: 50px;
+            }
+        } 
+    }
+}
+
 .container {
     &.main {
         padding: 0;
@@ -26,3 +36,9 @@
     }
 }
 
+.product {
+    .woocommerce-product-gallery {
+        max-width: unset;
+        width: 500px;
+    }
+} 

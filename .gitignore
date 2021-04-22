@@ -16,7 +16,9 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+.env
 
 node_modules/
 
-package-lock.json
+src/maps
+style.css

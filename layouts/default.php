@@ -2,7 +2,6 @@
 /**
  * Template Name: Content Page without Events Feed
  * 
- * The template file for the homepage
  *
  *
  * @package Wondai Country Running Festival

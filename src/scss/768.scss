@@ -32,11 +32,23 @@ body {
         .content {
             padding-left: 0;   
         }
+
+        .product {
+            .woocommerce-product-gallery {
+                margin-top: 100px;
+            }
+        } 
     }
 }
 
 .page-title {
     text-align: right;
+}
+
+.container {
+    &.main {
+        padding: 0 50px;
+    }
 }
 
 .content {
@@ -68,3 +80,9 @@ body {
 .social-feed {
     padding: 0;
 }
+
+.product {
+    .woocommerce-product-gallery {
+        margin-top: 200px;
+    }
+}  

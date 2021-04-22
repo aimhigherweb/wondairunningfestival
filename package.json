@@ -1,27 +1,26 @@
 {
   "name": "wondairunningfestival",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Custom Template for Wondai Country Running Festival",
   "repository": {
     "type": "git",
-    "url": "git@github.com:AimHigher-Web-Design/wondairunningfestival.git"
+    "url": "git@github.com:aimhigherweb/wondairunningfestival.git"
   },
   "scripts": {
-    "start": "gulp sassy && gulp watch",
-    "build": "gulp sassy && gulp styleVersion"
+    "start": "npm run sass && npm run dev",
+    "dev": "gulp watch",
+    "build": "npm run sass && gulp styleVersion",
+    "sass": "gulp sassy"
   },
-  "author": "AimHigher Web Design",
-  "bugs": {
-    "url": "https://github.com/AimHigher-Web-Design/wondairunningfestival/issues"
-  },
-  "homepage": "https://github.com/AimHigher-Web-Design/wondairunningfestival#readme",
-  "dependencies": {
-    "outdatedbrowser": "^1.1.5"
-  },
+  "author": "AimHigher Web Design <amy@aimhigherweb.design> (https://aimhigherweb.design)",
   "devDependencies": {
-    "gulp": "^4.0.2",
+    "gulp": "^4.0.0",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "dotenv": "^8.2.0",
+    "gulp-dart-sass": "^1.0.2"
   }
 }
