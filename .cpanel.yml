@@ -1,6 +1,5 @@
 ---
 deployment:
   tasks:
-    - npm install
     - export DEPLOYPATH=/home/wondaico/public_html/
     - /bin/cp -R * $DEPLOYPATH
