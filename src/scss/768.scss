@@ -49,6 +49,14 @@ body {
     &.main {
         padding: 0 50px;
     }
+
+    &.home-blocks {
+        margin-left: -50px;
+    }
+}
+
+.image-banner {
+    left: -50px;
 }
 
 .content {
