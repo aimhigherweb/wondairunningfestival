@@ -293,7 +293,7 @@ body .wpmf-gallerys .gallery-galler-masonry {
   z-index: 0;
 }
 .container.home-blocks {
-  margin-left: -10px;
+  margin-left: -20px;
   position: relative;
   top: -18vh;
   overflow: hidden;
@@ -359,7 +359,7 @@ form.woocommerce-cart-form, form.checkout, form.woocommerce-checkout {
   height: 100vh;
   width: 100vw;
   position: relative;
-  left: -10px;
+  left: -20px;
   z-index: -1;
 }
 .image-banner:before {
@@ -887,6 +887,13 @@ footer .aimhigher a:active svg .cls-2, footer .aimhigher a:hover svg .cls-2, foo
   .container.main {
     padding: 0 50px;
   }
+  .container.home-blocks {
+    margin-left: -50px;
+  }
+
+  .image-banner {
+    left: -50px;
+  }
 
   .content {
     text-align: right;
@@ -915,6 +922,15 @@ footer .aimhigher a:active svg .cls-2, footer .aimhigher a:hover svg .cls-2, foo
 
   .product .woocommerce-product-gallery {
     margin-top: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .image-banner {
+    left: calc(-1 * (50vw - 600px));
+  }
+
+  .container.home-blocks {
+    margin-left: calc(-1 * (50vw - 600px));
   }
 }
 @media (min-width: 75rem) {
