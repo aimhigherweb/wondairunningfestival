@@ -36,25 +36,11 @@ get_header(); ?>
 
                 <?php
 
-                    $event = get_field('date');
-
-                    $event_date = new DateTime((
-
-                        substr($event, 0, 4)
-
-                        . '-' . 
-
-                        substr($event, 4, 2) 
-
-                        . '-' . 
-
-                        substr($event, 6, 2)
-
-                    ),
-
-                        new DateTimeZone('Australia/Brisbane')
-
-                    );
+                    $event = get_field('event_date');
+					$event_date = new DateTime(
+						$event,
+						new DateTimeZone('Australia/Brisbane')
+					);
 
                 ?>
 
